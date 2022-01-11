@@ -4,6 +4,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
     <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
     <title>Add Product Page</title>
+    <style>
+        .match-card {
+        border: 4px solid grey;
+        background: #ffd0b0;
+        height: auto;
+        width: 350px;
+        box-shadow: 0 0 1px #000;
+    }
+    </style>
 </head>
 <body>
 <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
@@ -35,7 +44,8 @@
         <h1><b>Add Product</b></h1>
     </div>
 </header>
-<div class="center">
+<div class="center" align="center" >
+    <div class="match-card text-white">
     <form action="#" th:action="@{/save}" th:object="${product}" method="post">
         <div class="form-row">
             <div class="input-group">
@@ -53,9 +63,11 @@
                 <input type="text" aria-label="Name" class="form-control" th:field="*{productPrice}">
             </div>
         <br>
-        <input type="submit" value="Submit">
+            <span></span>
+        <input  type="submit" value="Submit">
         </div>
     </form>
+    </div>
 </div>
 </body>
 </html>
